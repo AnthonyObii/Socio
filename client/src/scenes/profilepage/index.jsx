@@ -8,13 +8,6 @@ import MyPostWidget from "scenes/widgets/MyPostWidget";
 import PostsWidget from "scenes/widgets/PostsWidget";
 import UserWidget from "scenes/widgets/UserWidgets";
 
-
-
-
-
-
-
-
 const ProfiiePage = () => {
      const [user, setUser] = useState(null);
      const { userId} = useParams();
@@ -22,7 +15,7 @@ const ProfiiePage = () => {
      const isNonMobileScreens = useMediaQuery("(min-width:1000px)")
 
      const getUser = async ()=> {
-          const response = await fetch(`https://socio-foyo.onrender.com/${userId}`, {
+          const response = await fetch(`https://socio-foyo.onrender.com/users/${userId}`, {
                method: "GET",
                headers: {Authorization: `Bearer ${token}`}
           })
